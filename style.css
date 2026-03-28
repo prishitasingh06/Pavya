@@ -1,0 +1,53 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #e6fff8, #ffdab9, #f5d2d3);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .login-screen, #trackerContainer {
+    background: rgba(255,255,255,0.9);
+    padding: 25px;
+    border-radius: 30px;
+    width: 350px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    transition:0.3s;
+    text-align:center;
+  }
+  
+  /* Logo */
+  .logo {width:120px;height:120px;border-radius:50%; box-shadow:0 6px 12px rgba(164,126,140,0.2);}
+  .logo:hover {transform:scale(1.05); box-shadow:0 10px 20px rgba(164,126,140,0.3);}
+  
+  /* Tagline */
+  .tagline {font-size:1rem;color:#666;margin-bottom:20px;}
+  
+  /* Login Form */
+  .login-form input, .interactive-card input {
+    width: 90%; padding:10px; margin:6px 0; border-radius:15px; border:1px solid #ccc; font-size:0.95rem;
+  }
+  
+  .login-form button, .interactive-card button {
+    padding:10px 15px; border-radius:15px; border:none; background-color:#a47e8c; color:white; font-weight:bold;
+    cursor:pointer; transition:0.2s; margin-top:6px; width: 50%;
+  }
+  .login-form button:hover, .interactive-card button:hover {background-color:#8b6576; transform:translateY(-2px);}
+  
+  /* Dashboard Header */
+  .dashboard-header {display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;}
+  .dashboard-header h2 {font-size:1.4rem; color:#4d4d4d;}
+  .dashboard-header button {padding:6px 12px; border-radius:15px; background:#a47e8c; color:white; cursor:pointer;}
+  .dashboard-header button:hover {background:#8b6576;}
+  
+  /* Cards Container */
+  .cards-container {display:flex; flex-direction:column; gap:12px;}
+  .card {background: rgba(164,126,140,0.15); padding:15px 15px; border-radius:20px; box-shadow:0 4px 8px rgba(164,126,140,0.1); transition:0.2s;}
+  .card:hover {transform:translateY(-2px); box-shadow:0 10px 16px rgba(164,126,140,0.2);}
+  
+  /* Calendar Grid */
+  .calendar-grid {display:grid; grid-template-columns: repeat(7, 1fr); gap:4px; margin-top:6px;}
+  .calendar-day {padding:8px; border-radius:10px; background:white; text-align:center; font-size:0.85rem; box-shadow:0 2px 6px rgba(0,0,0,0.05);}
+  .calendar-day.period {background:#f5d2d3; color:#a44765; font-weight:bold;}
+  .calendar-day.fertile {background:#e6fff8; color:#4da47e; font-weight:bold;}
+  .calendar-day.ovulation {background:#ffdab9; color:#b5764d; font-weight:bold;}      

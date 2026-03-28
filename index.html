@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pavya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- LOGIN SCREEN -->
+  <div id="loginContainer" class="login-screen">
+    <div class="logo-container">
+      <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+        <defs>
+          <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#e6fff8;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#f5d2d3;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <circle cx="60" cy="60" r="58" fill="none" stroke="#a47e8c" stroke-width="4"/>
+        <circle cx="60" cy="60" r="55" fill="white" opacity="0.85"/>
+        <text x="60" y="65" text-anchor="middle" dominant-baseline="middle" 
+              font-family="Montserrat, sans-serif" font-size="30" font-weight="700" fill="url(#textGradient)">
+          Pavya
+        </text>
+      </svg>
+      <p class="tagline">Your Personal Wellness & Cycle Companion</p>
+    </div>
+    <div class="login-form">
+      <input type="text" id="username" placeholder="Enter your name">
+      <button id="loginBtn">Login</button>
+    </div>
+  </div>
+
+  <!-- TRACKER DASHBOARD -->
+  <div id="trackerContainer" style="display:none;">
+    <div class="dashboard-header">
+      <h2>Hi, <span id="userDisplay"></span>!</h2>
+      <button id="logoutBtn">Logout</button>
+    </div>
+
+    <div class="cards-container">
+      <!-- Add Period Card -->
+      <div class="card interactive-card">
+        <h3>Add Period</h3>
+        <input type="date" id="startDate">
+        <input type="number" id="cycleLength" placeholder="Period length (days)">
+        <button id="addPeriodBtn">Add Period</button>
+      </div>
+
+      <!-- Next Period Card -->
+      <div class="card interactive-card">
+        <h3>Upcoming Info</h3>
+        <div id="nextPeriodInfo"></div>
+      </div>
+
+      <!-- Period History Card -->
+      <div class="card interactive-card">
+        <h3>Period History</h3>
+        <div id="periodHistory"></div>
+      </div>
+
+      <!-- Calendar Card -->
+      <div class="card interactive-card">
+        <h3>Calendar</h3>
+        <div id="calendar" class="calendar-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
